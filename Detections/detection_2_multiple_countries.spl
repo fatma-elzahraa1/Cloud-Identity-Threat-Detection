@@ -1,0 +1,10 @@
+# Detection 2: Multiple Countries in a Short Window
+# Detects the same account authenticating from 3 or more distinct countries
+# within a single 1-hour window - a stronger indicator than a single impossible
+# travel pair, suggesting the account is being used by multiple actors simultaneously.
+# MITRE ATT&CK: T1078 (Valid Accounts)
+
+index=cloud_identity
+| bin _time span=1h
+| stats dc(Country) as DistinctCountries, values(Country) as CountriesList by Username, _time
+| where DistinctCountries >= 3

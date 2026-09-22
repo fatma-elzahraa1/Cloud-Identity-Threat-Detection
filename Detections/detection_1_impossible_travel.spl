@@ -1,0 +1,20 @@
+# Detection 1: Impossible Travel
+# Detects same-user logins from two different countries within a 60-minute window,
+# a pattern physically impossible for legitimate travel.
+# MITRE ATT&CK: T1078 (Valid Accounts)
+
+index=cloud_identity
+| sort Username, Timestamp
+| streamstats current=f last(Country) as PrevCountry, last(Timestamp) as PrevTime by Username
+| eval TimeDiffMinutes = round((strptime(Timestamp,"%Y-%m-%dT%H:%M:%SZ") - strptime(PrevTime,"%Y-%m-%dT%H:%M:%SZ")) / 60, 1)
+| where Country != PrevCountry AND TimeDiffMinutes <= 60
+| table Username, PrevCountry, Country, PrevTime, Timestamp, TimeDiffMinutes
+
+# --- Tuned version (excludes known corporate VPN exit IP) ---
+# index=cloud_identity
+# | sort Username, Timestamp
+# | streamstats current=f last(Country) as PrevCountry, last(Timestamp) as PrevTime by Username
+# | eval TimeDiffMinutes = round((strptime(Timestamp,"%Y-%m-%dT%H:%M:%SZ") - strptime(PrevTime,"%Y-%m-%dT%H:%M:%SZ")) / 60, 1)
+# | where Country != PrevCountry AND TimeDiffMinutes <= 60
+# | where NOT SourceIP IN ("34.90.10.5")
+# | table Username, PrevCountry, Country, PrevTime, Timestamp, TimeDiffMinutes

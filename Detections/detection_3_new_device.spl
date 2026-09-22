@@ -1,0 +1,15 @@
+# Detection 3: New Device + Unusual Location
+# Detects logins where BOTH the device and the country are new for that user
+# (never seen in their prior sign-in history), occurring at the same time.
+# MITRE ATT&CK: T1078 (Valid Accounts)
+# Known limitation: if an attacker reuses a generic device string
+# (e.g. "Unknown-Device") across multiple sessions, subsequent logins from that
+# same string will not be flagged as "new" even from a different country.
+
+index=cloud_identity
+| sort Username, Timestamp
+| streamstats current=f values(Device) as PriorDevices, values(Country) as PriorCountries by Username
+| eval NewDevice=if(isnull(PriorDevices), "N/A", if(mvfind(PriorDevices, Device)>=0, "No", "Yes"))
+| eval NewCountry=if(isnull(PriorCountries), "N/A", if(mvfind(PriorCountries, Country)>=0, "No", "Yes"))
+| where NewDevice="Yes" AND NewCountry="Yes"
+| table Username, Timestamp, Device, Country, City, PriorDevices, PriorCountries

@@ -1,0 +1,29 @@
+Username,Timestamp,SourceIP,Country,City,Application,Device,OS,Browser,MFAResult,LoginResult,RiskLevel
+ahmed.hassan@company.com,2026-09-19T08:05:00Z,41.238.10.5,Egypt,Cairo,Outlook,Laptop-AH01,Windows 11,Chrome 128,Success,Success,Low
+ahmed.hassan@company.com,2026-09-19T13:20:00Z,41.238.10.5,Egypt,Cairo,Teams,Laptop-AH01,Windows 11,Chrome 128,Success,Success,Low
+ahmed.hassan@company.com,2026-09-20T08:10:00Z,41.238.10.5,Egypt,Cairo,Outlook,Laptop-AH01,Windows 11,Chrome 128,Success,Success,Low
+sara.mahmoud@company.com,2026-09-19T09:00:00Z,41.238.11.8,Egypt,Cairo,Teams,Laptop-SM04,Windows 11,Chrome 127,Success,Success,Low
+sara.mahmoud@company.com,2026-09-20T09:05:00Z,41.238.11.8,Egypt,Cairo,SharePoint,Laptop-SM04,Windows 11,Chrome 127,Success,Success,Low
+mostafa.ali@company.com,2026-09-19T10:15:00Z,41.238.9.3,Egypt,Cairo,SharePoint,Laptop-MA09,Windows 10,Edge 120,Success,Success,Low
+mostafa.ali@company.com,2026-09-20T10:20:00Z,41.238.9.3,Egypt,Cairo,Outlook,Laptop-MA09,Windows 10,Edge 120,Success,Success,Low
+khaled.reda@company.com,2026-09-19T07:45:00Z,41.238.14.2,Egypt,Cairo,Outlook,Laptop-KR11,Windows 11,Chrome 128,Success,Success,Low
+khaled.reda@company.com,2026-09-20T07:50:00Z,41.238.14.2,Egypt,Cairo,Teams,Laptop-KR11,Windows 11,Chrome 128,Success,Success,Low
+nourhan.said@company.com,2026-09-19T08:30:00Z,41.238.20.6,Egypt,Alexandria,Outlook,Laptop-NS02,Windows 11,Chrome 128,Success,Success,Low
+nourhan.said@company.com,2026-09-20T08:35:00Z,41.238.20.6,Egypt,Alexandria,Outlook,Laptop-NS02,Windows 11,Chrome 128,Success,Success,Low
+fatma.tarek@company.com,2026-09-20T09:00:00Z,41.238.10.9,Egypt,Cairo,Outlook,Laptop-FT02,Windows 11,Chrome 128,Success,Success,Low
+fatma.tarek@company.com,2026-09-20T09:15:00Z,172.98.55.20,United States,New York,Outlook,Unknown-Device,Windows 10,Edge 120,Success,Success,High
+omar.youssef@company.com,2026-09-20T11:00:00Z,41.238.12.9,Egypt,Cairo,Teams,Laptop-OY07,Windows 11,Chrome 128,Success,Success,Low
+omar.youssef@company.com,2026-09-20T11:20:00Z,85.25.10.44,Germany,Berlin,Outlook,Unknown-Device,Windows 10,Firefox 118,Success,Success,High
+omar.youssef@company.com,2026-09-20T11:35:00Z,191.32.44.10,Brazil,Sao Paulo,SharePoint,Unknown-Device,Linux,Firefox 118,Success,Success,High
+mona.adel@company.com,2026-09-18T08:00:00Z,41.238.15.2,Egypt,Cairo,Outlook,Laptop-MA05,Windows 11,Chrome 128,Success,Success,Low
+mona.adel@company.com,2026-09-19T08:05:00Z,41.238.15.2,Egypt,Cairo,Outlook,Laptop-MA05,Windows 11,Chrome 128,Success,Success,Low
+mona.adel@company.com,2026-09-20T14:00:00Z,5.199.10.33,Ukraine,Kyiv,Outlook,Unknown-New-Device,Linux,Firefox 118,Success,Success,High
+hany.fathy@company.com,2026-09-20T15:00:00Z,95.24.10.7,Russia,Moscow,Outlook,Unknown-Device,Windows 10,Chrome 128,Failure,Failure,Medium
+hany.fathy@company.com,2026-09-20T15:01:00Z,95.24.10.7,Russia,Moscow,Outlook,Unknown-Device,Windows 10,Chrome 128,Failure,Failure,Medium
+hany.fathy@company.com,2026-09-20T15:02:00Z,95.24.10.7,Russia,Moscow,Outlook,Unknown-Device,Windows 10,Chrome 128,Failure,Failure,Medium
+hany.fathy@company.com,2026-09-20T15:03:00Z,95.24.10.7,Russia,Moscow,Outlook,Unknown-Device,Windows 10,Chrome 128,Failure,Failure,Medium
+hany.fathy@company.com,2026-09-20T15:04:00Z,95.24.10.7,Russia,Moscow,Outlook,Unknown-Device,Windows 10,Chrome 128,Success,Success,High
+reem.saeed@company.com,2026-09-20T09:00:00Z,41.238.18.4,Egypt,Cairo,Outlook,Laptop-RS03,Windows 11,Chrome 128,Success,Success,Low
+reem.saeed@company.com,2026-09-20T09:40:00Z,34.90.10.5,Netherlands,Amsterdam,Outlook,Laptop-RS03,Windows 11,Chrome 128,Success,Success,Medium
+yara.mostafa@company.com,2026-09-20T10:00:00Z,41.238.22.1,Egypt,Cairo,Teams,Laptop-YM08,Windows 11,Chrome 128,Success,Success,Low
+yara.mostafa@company.com,2026-09-20T10:12:00Z,41.238.22.9,Egypt,Giza,Teams,Laptop-YM08,Windows 11,Chrome 128,Success,Success,Low

@@ -1,0 +1,12 @@
+# Detection 4: MFA Anomaly (MFA Fatigue / Bombing pattern)
+# Detects a streak of 3+ consecutive MFA failures for a user, immediately
+# followed by a successful authentication - a pattern consistent with an
+# attacker repeatedly prompting MFA until the victim approves by mistake,
+# or a brute-force attempt against a weak second factor.
+# MITRE ATT&CK: T1078 (Valid Accounts), T1621 (Multi-Factor Authentication Request Generation)
+
+index=cloud_identity
+| sort Username, Timestamp
+| streamstats count(eval(MFAResult="Failure")) as FailureStreak by Username reset_after="MFAResult=Success"
+| where MFAResult="Success" AND FailureStreak>=3
+| table Username, Timestamp, SourceIP, Country, FailureStreak
