@@ -150,9 +150,9 @@ Splunk Enterprise · SPL · VirusTotal · Microsoft Entra ID sign-in log schema
 ```
 
 ## Related Projects
-- [IR-Playbook-Meterpreter-C2-Detection](#) — endpoint-based C2 detection with Splunk + Sysmon
-- [Splunk-SOC-Home-Lab](#) — brute-force detection and SOC dashboarding
-- [Advanced-Detection-Engineering](#) — 10-scenario detection engineering lifecycle project
+- [IR-Playbook-Meterpreter-C2-Detection](https://github.com/fatma-elzahraa1/IR-Playbook-Meterpreter-C2-Detection) — endpoint-based C2 detection with Splunk + Sysmon
+- [SOC-Home-Lab](https://github.com/fatma-elzahraa1/SOC-Home-Lab) — brute-force detection and SOC dashboarding
+- [Advanced-Detection-Engineering](https://github.com/fatma-elzahraa1/Advanced-Detection-Engineering) — 10-scenario detection engineering lifecycle project
 
 ## Disclaimer
 This project uses a synthetic dataset modeled on official Microsoft schema
